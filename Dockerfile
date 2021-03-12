@@ -325,4 +325,6 @@ COPY --from=0 /lib/libgdal.so.26 \
 COPY --from=0 /openpose/build/caffe/lib/libcaffe.so.1.0.0 \
     /usr/lib/
 
+ENV NVIDIA_VISIBLE_DEVICES=1
+
 ENTRYPOINT ["./openpose.bin"]

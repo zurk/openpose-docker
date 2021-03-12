@@ -1,16 +1,10 @@
 # openpose-docker
-Dockerfile to build the excellent OpenPose software from CMU.
+This is Dockerfile to build minimal size Image (4 Gb) that you need to run openpose
 
 Ensure that you have `nvidia-docker` installed before you download this image.
 
-To run the container, use the following commmand - 
+To run pose estimation use the following commmand:
 
 ```bash
-xhost +
-docker run -it --net=host -e DISPLAY --runtime=nvidia <container-id>
+sh run.sh /absolute/path/to/dir/with/images /absolute/path/to/output/dir
 ```
-
-Supports - 
-1. CUDA 10
-2. CUDnn 7
-3. Python 3 (will be 3.7 soon)
